@@ -24,3 +24,14 @@ questionObjectArray[6] = new QuestionAnswer ('Which city was the imperial capita
 questionObjectArray[7] = new QuestionAnswer ('Which African mainland country lies next to Madagascar?', 'Mozambique', 'Liberia', 'Nigeria', 'South Africa', 'Geography');
 questionObjectArray[8] = new QuestionAnswer ('Which country has the lowest population density of any country in Europe?', 'Iceland', 'Finland', 'Sweden', 'Norway', 'Geography');
 questionObjectArray[9] = new QuestionAnswer ('What is the capital of Washington State?', 'Olympia', 'Seattle', 'Walla Walla', 'Spokane', 'Geography');
+
+questionObjectArray[10] = new QuestionAnswer ('______ are many books on JavaScript.', 'There', 'Their', 'They\'re', 'There\'s', 'Grammar');
+questionObjectArray[11] = new QuestionAnswer ('The ______ taught us a few new tricks.', 'principal', 'principle', 'principles', 'principals', 'Grammar');
+questionObjectArray[12] = new QuestionAnswer ('There are ______ many cooks in the kitchen.', 'too', 'two', 'to', 'tutu', 'Grammar');
+questionObjectArray[13] = new QuestionAnswer ('My parents ______ from Guatemala over 40 years ago.', 'emigrated', 'immigrated', 'emigrate', 'immigrate' 'Grammar');
+questionObjectArray[14] = new QuestionAnswer ('Fatigue is one ______ of lack of sleep.', 'effect', 'affect', 'affects', 'effects', 'Grammar');
+questionObjectArray[15] = new QuestionAnswer ('______ starting to get on my nerves.', 'You\'re', 'Yours', 'Your', 'Youre', 'Grammar');
+questionObjectArray[16] = new QuestionAnswer ('Please, ______ my apology.', 'accept', 'except', 'exempt', 'accepts' 'Grammar');
+questionObjectArray[17] = new QuestionAnswer ('The police interrogation ______ some revealing details about the crime.', 'elicited', 'illicit', 'elicit', 'illicited' 'Grammar');
+questionObjectArray[18] = new QuestionAnswer ('Chickens ______ eggs.', 'lay', 'lie', 'lied', 'layed','Grammar');
+questionObjectArray[19] = new QuestionAnswer ('I need to take a ______.', 'break', 'brake', 'broke', 'brakes', 'Grammar');
