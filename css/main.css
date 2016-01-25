@@ -1,0 +1,41 @@
+
+body {
+  background-color: #00868B;
+}
+#subContainerOne, #subContainerTwo, #subContainerThree {
+  margin: 1%;
+  padding: 1%;
+  width: calc(33.33% - 2%);
+
+}
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: .4;
+  border: 2px solid black;
+  width: 90%;
+  length: 90%;
+  margin: auto;
+}
+#subContainerOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: yellow;
+}
+#subContainerTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: green;
+}
+#subContainerThree  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+}
