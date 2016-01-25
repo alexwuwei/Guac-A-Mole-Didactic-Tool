@@ -5,3 +5,7 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
   this.wrongAnswerTwo = wrongAnswerTwo;
   this.wrongAnswerThree = wrongAnswerThree;
 }
+
+QuestionAnswer.prototype.rightAnswerCounter = 0;
+QuestionAnswer.prototype.wrongAnswerCounter = 0;
+QuestionAnswer.prototype.questionDisplayCounter = 0;
