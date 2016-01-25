@@ -9,3 +9,6 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
 QuestionAnswer.prototype.rightAnswerCounter = 0;
 QuestionAnswer.prototype.wrongAnswerCounter = 0;
 QuestionAnswer.prototype.questionDisplayCounter = 0;
+
+questionObjectArray = [];
+totalQuestionsAnsweredCounter = 0;
