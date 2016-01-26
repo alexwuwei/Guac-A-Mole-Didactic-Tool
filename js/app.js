@@ -37,26 +37,15 @@ questionObjectArray[18] = new QuestionAnswer ('Chickens ______ eggs.', 'lay', 'l
 questionObjectArray[19] = new QuestionAnswer ('I need to take a ______.', 'break', 'brake', 'broke', 'brakes', 'Grammar');
 
 QuestionObjectArray[20] = new questionObjectArray ('When a gas is turned into a liquid, the process is called______.', 'condensation', 'evaporation', 'deposition', 'appreciation', 'Science');
-
 QuestionObjectArray[21] = new questionObjectArray ('The sun’s ________  is easily visible only during a total solar eclipse?', 'corona', 'core', 'spots', 'nose', 'Science');
-
 QuestionObjectArray[22] = new questionObjectArray ('Yeast, used in making pizza is a _____.','fungus', 'seed', 'bacteria', 'virus', 'Science');
-
 QuestionObjectArray[23] = new questionObjectArray ('How long around is the Earth’s equator?', '24,901 miles', '34,901 miles', '14,901 miles', '44,901 miles', 'Science');
-
 QuestionObjectArray[24] = new questionObjectArray ('What is the speed of sound?', '767 m.p.h.','667 m.p.h.','867 m.p.h.','567 m.p.h.','Science');
-
 QuestionObjectArray[25] = new questionObjectArray ('At what temperature, in fahrenheit,  does water freeze?', '32 degrees', '31 degrees', '30 degrees', '29 degrees', 'Science');
-
 QuestionObjectArray[26] = new questionObjectArray ('Which of the following is used in pencils?', 'Graphite', 'aluminum', 'silicon', 'charcoal', 'Science');
-
 QuestionObjectArray[27] = new questionObjectArray ('What is the name of the highest mountain on Earth?', 'Mt. Everest', 'Mt. Neverest', 'Mt. Cleverest', 'Mt. Endevourest', 'Science');
-
 QuestionObjectArray[28] = new questionObjectArray ('What is the name of the largest ocean on Earth?', 'The Pacific', 'The Atlantic', 'The Indian', 'The Arctic', 'Science');
-
 QuestionObjectArray[29] = new questionObjectArray ('Which is hotter, the center of the Earth, or the surface of the Sun?', 'The Earth', 'The Sun', 'They are equally hot', 'Neither are hot', 'Science');
-
-
 
 questionObjectArray [30]=new QuestionAnswer (' There are ten houses on the street. Three people live in each house. How many people live on the street?','30','20','10','7','math');
 questionObjectArray [31]=new QuestionAnswer (' It takes Matt four hours to mow two lawns. How many lawns can he mow in ten hours?','Five lawns', 'Two lawns',' Ten lawns','Three lawns','math');
