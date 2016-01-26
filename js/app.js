@@ -82,10 +82,12 @@ function createDiv(divPosition) {
   divGoesInto.appendChild(newDiv);
 }
 
-var formTouched = getElementById('questionForm');
+// var formTouched = getElementById('questionForm');
+//
+// formTouched.addEventListener('click', getFormValue);
+//
+// function getFormValue (event) {
+//
+// }
 
-formTouched.addEventListener('click', getFormValue);
-
-function getFormValue (event) {
-
-}
+setInterval(questionDisplay, 2000);
