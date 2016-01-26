@@ -75,7 +75,7 @@ function questionDisplay () {
 
 function createDiv(divPosition) {
   var newDiv = document.createElement('div');
-  newDiv.innerHTML = '<form class="questionForm"><legend>' + questionObjectArray[divPosition].questionString + '</legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[divPosition].rightAnswer + '<input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerOne + '<input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerTwo + '<input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerThree + '</form>';
+  newDiv.innerHTML = '<form class="questionForm"><legend>' + questionObjectArray[divPosition].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[divPosition].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerThree + '</form>';
   newDiv.class = 'red ';
   var divGoesInto = document.getElementById(divPosition);
   divGoesInto.appendChild(newDiv);
