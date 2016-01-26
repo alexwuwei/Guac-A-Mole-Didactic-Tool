@@ -1,4 +1,4 @@
-var questionsAnswerArray[]
+var questionsAnswerArray = [];
 var globalQuestionStringTracker = 0;
 var globalRightAnswerTracker = 0;
 var globalWrongAnswerOneTracker = 0;
@@ -20,7 +20,7 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
   // this.globalWrongAnswerThreeTracker = 0;
   // this.globalCatagoryTracker = 0;
 
-}
+};
 
 QuestionAnswer.prototype.rightAnswerCounter = 0;
 QuestionAnswer.prototype.wrongAnswerCounter = 0;
@@ -127,6 +127,8 @@ function createDiv(divPosition) {
 }
 setInterval(questionDisplay, 1000);
 
+
+
 // var formTouched = document.getElementById('questionForm').answer;
 //
 // formTouched.addEventListener('submit', getFormValue);
@@ -136,5 +138,5 @@ function getFormValue (event) {
   console.log("handler fired");
   var selection = document.getElementById('questionForm0').getElementsByTagName('input');
   console.log(selection);
-    if (questionObjectArray[questionNumber].rightAnswer == questionForm.rightAnswer)
-    }
+    // if (questionObjectArray[questionNumber].rightAnswer == questionForm.rightAnswer)
+  }
