@@ -88,6 +88,7 @@ function createDiv(divPosition) {
 //
 // function getFormValue (event) {
 //
+//   document.questionForm.answer
 // }
 
 setInterval(questionDisplay, 2000);
