@@ -62,7 +62,7 @@ function questionDisplay () {
       var checkEmptyDiv = document.getElementById(i);
       if (checkEmptyDiv.childNodes.length === 0) {
         createDiv(i);
-        break;
+        return;
       } else {
         fullDivsCounter++;
       }
@@ -75,8 +75,17 @@ function questionDisplay () {
 
 function createDiv(divPosition) {
   var newDiv = document.createElement('div');
-  newDiv.innerHTML = '<form class="questionForm"><legend>' + questionObjectArray[divPosition].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[divPosition].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[divPosition].wrongAnswerThree + '</form>';
+  var randomNumber = Math.floor((Math.random() * 39) + 1);
+  newDiv.innerHTML = '<form id="questionForm"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '</form>';
   newDiv.class = 'red ';
   var divGoesInto = document.getElementById(divPosition);
   divGoesInto.appendChild(newDiv);
+}
+
+var formTouched = getElementById('questionForm');
+
+formTouched.addEventListener('click', getFormValue);
+
+function getFormValue (event) {
+
 }
