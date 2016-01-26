@@ -58,7 +58,7 @@ questionObjectArray[39]=new QuestionAnswer (' If an increase of 20% will change 
 function questionDisplay () {
   while (totalQuestionsAnsweredCounter < 15) {
     var fullDivsCounter = 0;
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 9; i++) {
       var checkEmptyDiv = document.getElementById(i);
       if (checkEmptyDiv.childNodes.length === 0) {
         createDiv(i);
@@ -76,19 +76,22 @@ function questionDisplay () {
 function createDiv(divPosition) {
   var newDiv = document.createElement('div');
   var randomNumber = Math.floor((Math.random() * 39) + 1);
-  newDiv.innerHTML = '<form id="questionForm"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '</form>';
-  newDiv.class = 'red ';
+  newDiv.innerHTML = '<form id="questionForm"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '</form><br><input type="submit" name="submitAnswer" value="Submit Your Answer" />';
+  newDiv.class = questionObjectArray[randomNumber].category;
   var divGoesInto = document.getElementById(divPosition);
   divGoesInto.appendChild(newDiv);
 }
-
-// var formTouched = getElementById('questionForm');
-//
-// formTouched.addEventListener('click', getFormValue);
-//
-// function getFormValue (event) {
-//
-//   document.questionForm.answer
-// }
-
 setInterval(questionDisplay, 2000);
+
+var formTouched = document.getElementById('questionForm').answer;
+
+formTouched.addEventListener('submit', getFormValue);
+
+function getFormValue (event) {
+  var selection = document.questionForm.answer;
+  for (var i = 0; i < selection.length; i++) {
+    if (selection[i].checked == true) {
+      console.log(selection[i]);
+    }
+  }
+}
