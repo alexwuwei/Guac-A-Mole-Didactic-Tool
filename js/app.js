@@ -55,3 +55,16 @@ QuestionObjectArray[27] = new questionObjectArray ('What is the name of the high
 QuestionObjectArray[28] = new questionObjectArray ('What is the name of the largest ocean on Earth?', 'The Pacific', 'The Atlantic', 'The Indian', 'The Arctic', 'Science');
 
 QuestionObjectArray[29] = new questionObjectArray ('Which is hotter, the center of the Earth, or the surface of the Sun?', 'The Earth', 'The Sun', 'They are equally hot', 'Neither are hot', 'Science');
+
+
+
+questionObjectArray [30]=new QuestionAnswer (' There are ten houses on the street. Three people live in each house. How many people live on the street?','30','20','10','7','math');
+questionObjectArray [31]=new QuestionAnswer (' It takes Matt four hours to mow two lawns. How many lawns can he mow in ten hours?','Five lawns', 'Two lawns',' Ten lawns','Three lawns','math');
+questionObjectArray [32]=new QuestionAnswer ('20 = 3x + 8; x = ?','4','3','2','6','math');
+questionObjectArray [33]=new QuestionAnswer ('increase 5 by 40%','7','45','9','35','math');
+questionObjectArray [34]=new QuestionAnswer ('A man\'s regular pay is $3 per hour up to 40 hours. Overtime is twice the payment for regular time. If he was paid $168, how many hours overtime did he work?','8','28','16','12','math');
+questionObjectArray [35]=new QuestionAnswer (' Items bought by a trader for $80 are sold for $100. The profit expressed as a percentage of cost price is','25%','20%','2.5','15','math')
+questionObjectArray [36]=new QuestionAnswer ('Which of the following is NOT a prime number?','21','11','41','31','math');
+questionObjectArray [37]=new QuestionAnswer ('What is the simple interest earned on $10 000 invested for 3 months at a rate of 5% per annum?','125','100','500','200','math');
+questionObjectArray [38]=new QuestionAnswer ('A man bought a shirt at a sale.  He saves $30 on the normal price when he paid $120 for the shirt. What was the percentage discount on the shirt?','20','25','80','45','math');
+questionObjectArray [39]=new QuestionAnswer (' If an increase of 20% will change the price of an  item to $480, what is the original price of the item?','400','432','384','320','math');
