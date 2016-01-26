@@ -1,9 +1,10 @@
 .div-back-image {
   background-image: url("../img/images.jpeg");
   background-size: 100%;
+  border-radius: 15px;
+  border: solid 2px;
   height: 175px;
-  width: 150px;
-  border: solid 1px;
+  width: 275px;
 }
 body {
   background-color: #00868B;
@@ -18,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  border-radius: .4;
+  border-radius: 15px;
   border: 2px solid black;
   width: 90%;
   length: 90%;
@@ -29,6 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 15px;
   background-color: yellow;
 }
 #subContainerTwo {
@@ -36,6 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 15px;
   background-color: green;
 }
 #subContainerThree  {
@@ -43,5 +46,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 15px;
   background-color: red;
+}
+
+#questionForm {
+  background-color: beige;
+  border-radius: 15px;
 }
