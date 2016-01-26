@@ -1,4 +1,4 @@
-var questionsAnswerArray[]
+var questionsAnswerArray = [];
 var globalQuestionStringTracker = 0;
 var globalRightAnswerTracker = 0;
 var globalWrongAnswerOneTracker = 0;
@@ -20,7 +20,7 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
   // this.globalWrongAnswerThreeTracker = 0;
   // this.globalCatagoryTracker = 0;
 
-}
+};
 
 QuestionAnswer.prototype.rightAnswerCounter = 0;
 QuestionAnswer.prototype.wrongAnswerCounter = 0;
@@ -89,42 +89,54 @@ questionObjectArray[39]=new QuestionAnswer (' If an increase of 20% will change 
 // wrongAnswerThreeArray = ['Rio De Janeiro','Saudi Arabia','Africa','Farmington','Mount Shasta','Mexico City','Hiroshima','South Africa','Norway','Spokane','There\'s','principals','tutu','immigrate','effects','Youre','accepts','illicited','layed','brakes','appreciation','nose','virus','44,901 miles','567 m.p.h.','29 degrees','charcoal','Mt. Endevourest','The Arctic','Neither are hot','7','Three lawns','6','35''12','15','31','200','45','320',]
 
 function questionDisplay () {
-  while (totalQuestionsAnsweredCounter < 15) {
+  while (totalQuestionsAnsweredCounter < 2) {
     var fullDivsCounter = 0;
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 3; i++) {
       var checkEmptyDiv = document.getElementById(i);
       if (checkEmptyDiv.childNodes.length === 0) {
         createDiv(i);
+        totalQuestionsAnsweredCounter++;
         return;
       } else {
         fullDivsCounter++;
       }
-      if (fullDivsCounter > 8) {
-        //display game over div
-      }
+      // if (fullDivsCounter > 8) {
+      //   //display game over div
+      // }
     }
   }
 }
-
+var formTouched;
+var questionNumber;
+// if questionObjectArray[questionNumber].rightAnswer ==
 function createDiv(divPosition) {
+  console.log(divPosition);
   var newDiv = document.createElement('div');
+  newDiv.setAttribute('id', 'formDiv' + divPosition)
   var randomNumber = Math.floor((Math.random() * 39) + 1);
-  newDiv.innerHTML = '<form id="questionForm"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="answer" value="answer" />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="answer" value="answer" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '</form><br><input type="submit" name="submitAnswer" value="Submit Your Answer" />';
+  questionNumber = randomNumber;
+  var divDeclare = 'questionForm' + divPosition;
+  console.log(divDeclare);
+  newDiv.innerHTML = '<form id="' + divDeclare + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
   newDiv.class = questionObjectArray[randomNumber].category;
   var divGoesInto = document.getElementById(divPosition);
   divGoesInto.appendChild(newDiv);
+  formTouched = document.getElementById('questionForm' + divPosition);
+  console.log("questionForm[" + divPosition + "]?"  + formTouched);
+  formTouched.addEventListener('submit', getFormValue);
 }
-setInterval(questionDisplay, 2000);
+setInterval(questionDisplay, 1000);
 
-var formTouched = document.getElementById('questionForm').answer;
 
-formTouched.addEventListener('submit', getFormValue);
 
+// var formTouched = document.getElementById('questionForm').answer;
+//
+// formTouched.addEventListener('submit', getFormValue);
+//
 function getFormValue (event) {
-  var selection = document.questionForm.answer;
-  for (var i = 0; i < selection.length; i++) {
-    if (selection[i].checked == true) {
-      console.log(selection[i]);
-    }
+  event.preventDefault();
+  console.log("handler fired");
+  var selection = document.getElementById('questionForm0').getElementsByTagName('input');
+  console.log(selection);
+    // if (questionObjectArray[questionNumber].rightAnswer == questionForm.rightAnswer)
   }
-}
