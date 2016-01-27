@@ -1,10 +1,12 @@
 .div-back-image {
+  /*display: flex;*/
+  /*justify-content: center;*/
   background-image: url("../img/images.jpeg");
   background-size: 100%;
   border-radius: 15px;
   border: solid 2px;
   min-height: 100px;
-  height: 251px;
+  height: 241px;
   width: 100%;
 }
 body {
@@ -14,11 +16,9 @@ body {
   margin: 1%;
   padding: 1%;
   width: calc(33.33% - 2%);
-
 }
 #mainContainer {
   display: flex;
-  justify-content: center;
   flex-direction: row;
   border-radius: 15px;
   border: 2px solid black;
@@ -39,7 +39,6 @@ body {
   flex-direction: column;
   border-radius: 15px;
   background-color: green;
-
 }
 #subContainerThree  {
   justify-content: center;
@@ -47,12 +46,40 @@ body {
   flex-direction: column;
   border-radius: 15px;
   background-color: red;
-
 }
-
 #questionForm0, #questionForm1, #questionForm2, #questionForm3, #questionForm4, #questionForm5, #questionForm6, #questionForm7, #questionForm8 {
   background-color: beige;
   border-radius: 15px;
-  font-style: oblique;
+  font-family: sans-serif;
   font-weight: bold;
+  padding: 2%;
+  height:231px;
+  width:100%;
+  left: 50%;
+  top: 50%;
+}
+button {
+justify-content: flex-end;
+}
+#youWin {
+  background-color: beige;
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 2%;
+  height:231px;
+  width:100%;
+  left: 50%;
+  top: 50%;
+}
+#youLose {
+  background-color: beige;
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 2%;
+  height:231px;
+  width:100%;
+  left: 50%;
+  top: 50%;
 }
