@@ -139,10 +139,7 @@ setInterval(questionDisplay, 10000);
 
 
 var formConcatenate;
-// var formTouched = document.getElementById('questionForm').answer;
-//
-// formTouched.addEventListener('submit', getFormValue);
-//
+
 function getFormValue (event) {
   event.preventDefault();
   console.log("handler fired");
