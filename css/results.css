@@ -37,10 +37,11 @@ canvas {
   border: 5px solid #FF7600;
   outline: 5px solid white;
   /*border: 2px solid black;*/
+  align-self: center;
 }
 
 body {
-  background-color: #00868B;  
+  background-color: #00868B;
   font-family: sans-serif;
 }
 
