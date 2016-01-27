@@ -135,14 +135,11 @@ function createDiv(divPosition) {
   console.log("questionForm[" + divPosition + "]?"  + formTouched);
   formTouched.addEventListener('submit', getFormValue);
 }
-setInterval(questionDisplay, 10000);
+setInterval(questionDisplay, 3000);
 
 
 var formConcatenate;
-// var formTouched = document.getElementById('questionForm').answer;
-//
-// formTouched.addEventListener('submit', getFormValue);
-//
+
 function getFormValue (event) {
   event.preventDefault();
   console.log("handler fired");
@@ -154,9 +151,13 @@ function getFormValue (event) {
       questionObjectArray[questionNumber].rightAnswerCounter++;
       totalQuestionsAnsweredCounter++;
       localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
+      questionForm0.innerHTML = '<br><br><br>   Correct!<br><br><br>'
+      setTimeout(function () {questionForm0.remove();},2000);
     } else {
       questionObjectArray[questionNumber].wrongAnswerCounter++;
       totalQuestionsAnsweredCounter++;
       localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
+      questionForm0.innerHTML = '<br><br><br>   Incorrect!<br><br><br>'
+      setTimeout(function () {questionForm0.remove();},2000);
     }
   }
