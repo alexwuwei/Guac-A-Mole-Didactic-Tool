@@ -45,7 +45,7 @@ align-self: center;
   align-content: flex-end;
 }
 
-.teamMember {
+/*.teamMember {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -55,6 +55,49 @@ align-self: center;
   flex: 1;
   padding: 1%;
   border-radius: 5px;
+
+}*/
+
+.mainContainer {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.mainContainer:hover .flipper, .mainContainer.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.mainContainer, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
 
 img {
@@ -65,4 +108,3 @@ img {
   max-width: 100%;
   max-height: 100%;
   }
-  
