@@ -137,7 +137,7 @@ function createDiv(divPosition) {
 setInterval(questionDisplay, 10000);
 
 
-
+var formConcatenate;
 // var formTouched = document.getElementById('questionForm').answer;
 //
 // formTouched.addEventListener('submit', getFormValue);
@@ -145,7 +145,7 @@ setInterval(questionDisplay, 10000);
 function getFormValue (event) {
   event.preventDefault();
   console.log("handler fired");
-  var formConcatenate = 'questionForm' + questionTracker;
+  formConcatenate = 'questionForm' + questionTracker;
   console.log(formConcatenate);
   var selection = document.getElementById(formConcatenate).getElementsByTagName('input');
   console.log(selection);
