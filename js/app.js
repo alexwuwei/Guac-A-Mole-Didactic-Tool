@@ -161,3 +161,22 @@ function getFormValue (event) {
       setTimeout(function () {questionForm0.remove();},2000);
     }
   }
+
+  function youWin () {
+    var newDiv = document.createElement('div');
+    newDiv.setAttribute('id', 'youWin');
+    var divGoesInto = document.getElementById('8');
+    divGoesInto.innerHTML = '';
+    newDiv.innerHTML = '<h3>You win! Congratulations, and stuff. Go check out your results, and see where you did best!</h3><br><button name="seeYourResults" >See your results</button>';
+    divGoesInto.appendChild(newDiv);
+  }
+
+  function youLose() {
+    var newDiv = document.createElement('div');
+    newDiv.setAttribute('id', 'youLose');
+    var divGoesInto = document.getElementById('8');
+    divGoesInto.innerHTML = '';
+    newDiv.innerHTML = '<h3>You lose (sorries). Go check out your results, and see where you need to improve</h3><br><button name="seeYourResults" >See your results</button>';
+    divGoesInto.appendChild(newDiv);
+
+  }
