@@ -3,8 +3,9 @@
   background-size: 100%;
   border-radius: 15px;
   border: solid 2px;
-  height: 175px;
-  width: 275px;
+  min-height: 100px;
+  height: 251px;
+  width: 100%;
 }
 body {
   background-color: #00868B;
@@ -26,7 +27,6 @@ body {
   margin: auto;
 }
 #subContainerOne {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -34,23 +34,23 @@ body {
   background-color: yellow;
 }
 #subContainerTwo {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
   background-color: green;
+
 }
 #subContainerThree  {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
   background-color: red;
+
 }
 
-#questionForm {
+#questionForm0, #questionForm1, #questionForm2, #questionForm3, #questionForm4, #questionForm5, #questionForm6, #questionForm7, #questionForm8 {
   background-color: beige;
   border-radius: 15px;
 }
