@@ -138,5 +138,9 @@ function getFormValue (event) {
   console.log("handler fired");
   var selection = document.getElementById('questionForm0').getElementsByTagName('input');
   console.log(selection);
-    // if (questionObjectArray[questionNumber].rightAnswer == questionForm.rightAnswer)
+    if (questionForm0.rightAnswer.checked) {
+      console.log('you win you fucker');
+    } else {
+      console.log('you lose');
+    }
   }
