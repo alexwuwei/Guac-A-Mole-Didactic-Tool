@@ -1,29 +1,61 @@
 header {
   display: flex;
-  flex-direction: row;
+  background-color: #FF7600;
+  margin: 10px;
+  height: 140px;
+  border-radius: 5px;
   justify-content: flex-start;
-  border-bottom: 1px solid black;
+  border: 5px solid white;
+}
+
+.logo {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 1%
+  align-self: flex-start;
 }
 
 header > h2 {
-  margin-left: 25%;
+font-size: 50px;
+font-family: cursive;
+display: flex;
+flex-direction: row;
+margin-left: 30%;
+align-self: center;
 }
+
 
 #canvasContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 6%;
 }
 
 canvas {
-  border: 2px solid black;
+  border: 5px solid #FF7600;
+  outline: 5px solid white;
+  /*border: 2px solid black;*/
 }
 
 body {
-  background-color: #00868B;
+  background-color: #00868B;  
   font-family: sans-serif;
 }
 
 button {
   margin-top: 1%;
 }
+
+footer {
+  display: flex;
+  align-self: end;
+  font-size: 14px;
+  margin: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: #FF7600;
+  padding: 1%;
+  border: 5px solid white;
+  }
