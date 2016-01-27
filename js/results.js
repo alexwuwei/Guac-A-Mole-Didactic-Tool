@@ -1,7 +1,7 @@
-var chartData = localStorage.getItem('chartPersist');
+var chartData = localStorage.getItem(JSON.parse('guacaResults'));
   if (chartData){
     data = JSON.parse(chartData);
-    for (var i = 0; i <prodArray.length; i++) {
+    for (var i = 0; i < prodArray.length; i++) {
       questionsArray[i].questionStringTracker = data.datasets[0].data[i];
       rightAnswerArray[i].rightAnswerTracker = data.datasets[1].data[i];
       wrongAnswerOneArray[i].wrongAnswerOneTracker = data.datasets[2].data[i];
