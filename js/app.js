@@ -95,7 +95,6 @@ function questionDisplay () {
       var checkEmptyDiv = document.getElementById(i);
       if (checkEmptyDiv.childNodes.length === 0) {
         createDiv(i);
-        totalQuestionsAnsweredCounter++;
         return;
       } else {
         fullDivsCounter++;
@@ -108,13 +107,23 @@ function questionDisplay () {
 }
 var formTouched;
 var questionNumber;
+var questionTracker;
+var randomNumberArray = [];
 // if questionObjectArray[questionNumber].rightAnswer ==
 function createDiv(divPosition) {
   console.log(divPosition);
+  questionTracker = divPosition;
   var newDiv = document.createElement('div');
   newDiv.setAttribute('id', 'formDiv' + divPosition)
   var randomNumber = Math.floor((Math.random() * 39) + 1);
+  randomNumberArray.push(randomNumber);
+  for (var g = 0; g < randomNumberArray.length; g++) {
+    if (randomNumberArray[g] == randomNumber) {
+      var randomNumber = Math.floor((Math.random() * 39) + 1);
+    }
+  };
   questionNumber = randomNumber;
+  questionObjectArray[randomNumber].questionDisplayCounter++
   var divDeclare = 'questionForm' + divPosition;
   console.log(divDeclare);
   newDiv.innerHTML = '<form id="' + divDeclare + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
@@ -125,7 +134,7 @@ function createDiv(divPosition) {
   console.log("questionForm[" + divPosition + "]?"  + formTouched);
   formTouched.addEventListener('submit', getFormValue);
 }
-setInterval(questionDisplay, 1000);
+setInterval(questionDisplay, 10000);
 
 
 
@@ -136,11 +145,15 @@ setInterval(questionDisplay, 1000);
 function getFormValue (event) {
   event.preventDefault();
   console.log("handler fired");
-  var selection = document.getElementById('questionForm0').getElementsByTagName('input');
+  var formConcatenate = 'questionForm' + questionTracker;
+  console.log(formConcatenate);
+  var selection = document.getElementById(formConcatenate).getElementsByTagName('input');
   console.log(selection);
     if (questionForm0.rightAnswer.checked) {
-      console.log('you win you fucker');
+      questionObjectArray[questionNumber].rightAnswerCounter++;
+      totalQuestionsAnsweredCounter++;
     } else {
-      console.log('you lose');
+      questionObjectArray[questionNumber].wrongAnswerCounter++;
+      totalQuestionsAnsweredCounter++;
     }
   }
