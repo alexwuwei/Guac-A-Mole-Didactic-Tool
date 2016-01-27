@@ -5,16 +5,19 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Box-sizing border-box */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+body {
+  background-color: #00868B;
+  font-family: sans-serif;
+}
+
 header {
   display: flex;
-  background-color: orange;
-  margin: 10px;
+  background-color: #FF7600;
+  margin: 2% 1% 1% 1%;
   height: 140px;
   border-radius: 5px;
-  flex-direction: row;
   justify-content: flex-start;
-  border: 5px solid lightgreen;
-  outline: 5px solid black;
+  border: 5px solid white;
 }
 
 .logo {
@@ -32,28 +35,28 @@ display: flex;
 flex-direction: row;
 margin-left: 30%;
 align-self: center;
+text-shadow: 1px 1px 2px white;
 }
 
-body {
-  background-color: #00868B;
-  font-family: sans-serif;
 
-}
 
 .mainContainer {
  display:flex;
  justify-content: center;
  width: 35%;
- background-color: orange;
- border: 2px solid black;
+ background-color: #40007D;
+ border: 5px solid white;
  border-radius: 10px;
  margin-top: 10%;
  padding: 1% 1% 2% 1%;
 }
-.welcomeMessage{
+
+.welcomeMessage {
   width:90%;
   height: 20%;
   font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  color: white;
 }
 
 #mainMainContainer {
@@ -61,7 +64,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 15%;
 }
 
 .welcomeButton {
@@ -72,13 +74,13 @@ body {
 
 footer {
   display: flex;
-  align-self: end;
   font-size: 14px;
-  margin: 10px;
+  margin: 11% 1% 1% 1%;
   border-radius: 10px;
   justify-content: center;
-  background-color: orange;
+  background-color: #FF7600;
   padding: 1%;
+  border: 5px solid white;
   }
 
 .welcomeButton {
@@ -131,4 +133,4 @@ footer {
   -webkit-transition: all 10ms;
   transition: all 10ms;
 }
-questionForm 
+questionForm
