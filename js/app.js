@@ -124,7 +124,7 @@ function createDiv(divPosition) {
   };
   questionNumber = randomNumber;
   questionObjectArray[randomNumber].questionDisplayCounter++
-  localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
+  localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
   var divDeclare = 'questionForm' + divPosition;
   console.log(divDeclare);
   newDiv.innerHTML = '<form id="' + divDeclare + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
@@ -153,10 +153,10 @@ function getFormValue (event) {
     if (questionForm0.rightAnswer.checked) {
       questionObjectArray[questionNumber].rightAnswerCounter++;
       totalQuestionsAnsweredCounter++;
-      localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
+      localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
     } else {
       questionObjectArray[questionNumber].wrongAnswerCounter++;
       totalQuestionsAnsweredCounter++;
-      localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
+      localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
     }
   }
