@@ -11,7 +11,7 @@ var data = {
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81]
+            data: [0, 0, 0, 0]
         },
         {
             label: "Correct Answers No.",
@@ -19,7 +19,7 @@ var data = {
             strokeColor: "rgba(151,187,205,0.8)",
             highlightFill: "rgba(151,187,205,0.75)",
             highlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19]
+            data: [0, 0, 0, 0]
         },
         {
             label: "Incorrect Answers No.",
@@ -27,7 +27,7 @@ var data = {
             strokeColor: "rgba(220,220,220,0.8)",
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81]
+            data: [0, 0, 0, 0]
         },
     ]
 };
@@ -35,20 +35,32 @@ var data = {
 for (i = 0; i < 39; i++) {
   if (chartData[i].category == 'math') {
      data.datasets[0].data[1] += chartData[i].questionDisplayCounter;
+     console.log('math thing found');
      data.datasets[1].data[1] += chartData[i].rightAnswerCounter;
+     console.log('math thing found');
      data.datasets[2].data[1] += chartData[i].wrongAnswerCounter;
+     console.log('math thing found');
    } else if (chartData[i].category == 'Science') {
      data.datasets[0].data[2] += chartData[i].questionDisplayCounter;
+     console.log('science thing found');
      data.datasets[1].data[2] += chartData[i].rightAnswerCounter;
+     console.log('science thing found');
      data.datasets[2].data[2] += chartData[i].wrongAnswerCounter;
+     console.log('science thing found');
    } else if (chartData[i].category == 'Geography') {
      data.datasets[0].data[3] += chartData[i].questionDisplayCounter;
+     console.log('geography thing found');
      data.datasets[1].data[3] += chartData[i].rightAnswerCounter;
+     console.log('geography thing found');
      data.datasets[2].data[3] += chartData[i].wrongAnswerCounter;
+     console.log('geography thing found');
    } else if (chartData[i].category == 'Grammar') {
      data.datasets[0].data[3] += chartData[i].questionDisplayCounter;
+     console.log('grammar thing found');
      data.datasets[1].data[3] += chartData[i].rightAnswerCounter;
+     console.log('grammar thing found');
      data.datasets[2].data[3] += chartData[i].wrongAnswerCounter;
+     console.log('grammar thing found');
    }
    }
 
