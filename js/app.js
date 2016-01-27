@@ -89,7 +89,7 @@ questionObjectArray[39]=new QuestionAnswer (' If an increase of 20% will change 
 // wrongAnswerThreeArray = ['Rio De Janeiro','Saudi Arabia','Africa','Farmington','Mount Shasta','Mexico City','Hiroshima','South Africa','Norway','Spokane','There\'s','principals','tutu','immigrate','effects','Youre','accepts','illicited','layed','brakes','appreciation','nose','virus','44,901 miles','567 m.p.h.','29 degrees','charcoal','Mt. Endevourest','The Arctic','Neither are hot','7','Three lawns','6','35''12','15','31','200','45','320',]
 
 function questionDisplay () {
-  while (totalQuestionsAnsweredCounter < 2) {
+  while (totalQuestionsAnsweredCounter < 1) {
     var fullDivsCounter = 0;
     for (var i = 0; i < 3; i++) {
       var checkEmptyDiv = document.getElementById(i);
@@ -124,6 +124,7 @@ function createDiv(divPosition) {
   };
   questionNumber = randomNumber;
   questionObjectArray[randomNumber].questionDisplayCounter++
+  localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
   var divDeclare = 'questionForm' + divPosition;
   console.log(divDeclare);
   newDiv.innerHTML = '<form id="' + divDeclare + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
@@ -152,8 +153,10 @@ function getFormValue (event) {
     if (questionForm0.rightAnswer.checked) {
       questionObjectArray[questionNumber].rightAnswerCounter++;
       totalQuestionsAnsweredCounter++;
+      localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
     } else {
       questionObjectArray[questionNumber].wrongAnswerCounter++;
       totalQuestionsAnsweredCounter++;
+      localStorage.setItem('guacaResults', JSON.stringify(questionsAnswerArray));
     }
   }
