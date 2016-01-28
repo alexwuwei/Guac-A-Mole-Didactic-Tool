@@ -11,6 +11,16 @@ body {
   background-color: #00868B;
 }
 
+header > h2 {
+  font-size: 50px;
+  font-family: cursive;
+  display: flex;
+  flex-direction: row;
+  margin-left: 35%;
+  justify-content: center;
+  align-self: center;
+}
+
 header {
   display: flex;
   background-color: orange;
@@ -19,8 +29,12 @@ header {
   border-radius: 5px;
   flex-direction: row;
   justify-content: flex-start;
+  border: solid black;
   /*justify-content: center;
   align-items: center;*/
+}
+footer {
+
 }
 
 .logo {
@@ -30,189 +44,149 @@ header {
   align-self: flex-start;
 }
 
-
-
-header > h2 {
-font-size: 50px;
-font-family: cursive;
-display: flex;
-flex-direction: row;
-margin-left: 35%;
-justify-content: center;
-align-self: center;
-}
-
-.mainContainer {
+#mainContainer {
   display: flex;
-  align-content: flex-end;
   flex-direction: row;
+  justify-content: space-around;
 }
-
-.teamMember {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items:baseline;
-
+#containerOne {
+  background-color: orange;
+  border: solid black;
   margin: 1%;
-  background: orange;
-  flex: 1;
+  padding: 1%;
+  border-radius: 5px;
+}
+#containerTwo {
+  background-color: orange;
+  border: solid black;
+  margin: 1%;
   padding: 1%;
   border-radius: 5px;
 
 }
+#containerThree {
+  background-color: orange;
+  border: solid black;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 5px;
 
-/*#f4_container {
- position: relative;
- margin: 10px auto;
- width: 450px;
- height: 281px;
- z-index: 1;
- }
- #f4_container {
- perspective: 1000;
- }
- #f4_card {
- width: 100%;
- height: 100%;
- transform-style: preserve-3d;
- transition: all 1.0s linear;
- }
- #f4_container :hover #f4_card  {
- transform: rotateY(180deg);
- box-shadow: -5px 5px 5px #aaa;
- }
- .face {
- position: absolute;
- width: 100%;
- height: 100%;
- backface-visibility: hidden;
- }
-.face.back {
- display: block;
- transform: rotateY(180deg);
- box-sizing: border-box;
- padding: 10px;
- color: white;
- text-align: center;
- background-color: #aaa;
- }*/
+}
+#containerFour {
+  background-color: orange;
+  border: solid black;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 5px;
+}
+/*.frontOne {
+  content:url("img/hugo.jpg");
+}*/
 
- /*#f2_container {
-  position: relative;
-  margin: 10px auto;
-  width: 450px;
-  height: 281px;
-  z-index: 2;
-  }
-  #f2_container {
+
+/*.teamPhoto {
+  border-radius: 5px;
+  border: solid black 2px;
+}*/
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
   perspective: 1000;
-  }
-  #f2_card {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-  }
-  #f2_container:hover #f2_card {
-  transform: rotateY(180deg);
-  box-shadow: -5px 5px 5px #aaa;
-  }
-  .face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  }
- .face.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  background-color: #aaa;
-  }*/
-/*
-  #f3_container {
-   position: relative;
-   margin: 10px auto;
-   width: 450px;
-   height: 281px;
-   z-index: 2;
-   }
-   #f3_container {
-   perspective: 1000;
-   }
-   #f3_card {
-   width: 100%;
-   height: 100%;
-   transform-style: preserve-3d;
-   transition: all 1.0s linear;
-   }
-   #f3_container:hover #f3_card {
-   transform: rotateY(180deg);
-   box-shadow: -5px 5px 5px #aaa;
-   }
-   .face {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   }
-  .face.back {
-   display: block;
-   transform: rotateY(180deg);
-   box-sizing: border-box;
-   padding: 10px;
-   color: white;
-   text-align: center;
-   background-color: #aaa;
-   }*/
+	border: 1px solid #ccc;
+}
+
+	.flip-container:hover .flipper,
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front1, .front2, .front3, .back1, .back2, .back {
+	width: 200px;
+	height: 250px;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front1, .front2, .back1, .back2 {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	/*backface-visibility: hidden;*/
 
 
-     /*#f4_container {
-      position: relative;
-      margin: 10px auto;
-      width: 450px;
-      height: 281px;
-      z-index: 2;
-      }
-      #f4_container {
-      perspective: 1000;
-      }
-      #f4_card {
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: all 1.0s linear;
-      }
-      #f4_container:hover #f4_card {
-      transform: rotateY(180deg);
-      box-shadow: -5px 5px 5px #aaa;
-      }
-      .face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      }
-     .face.back {
-      display: block;
-      transform: rotateY(180deg);
-      box-sizing: border-box;
-      padding: 10px;
-      color: white;
-      text-align: center;
-      background-color: #aaa;
-      }*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*.frontOne {
+	background: url("img/hugo.jpg") 0 0 no-repeat;
+	z-index: 2;
+}*/
+
+.back1, .back2 {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+  /*background: url("") 0 0 no-repeat;*/
+	background: #f8f8f8;
+  /*background: red;*/
+}
+.front1 .name, .front2 .name {
+	background: rgba(33, 33, 33, 0.9);
+	color: #f8f8f8;
+	text-shadow: 0.1em 0.1em 0.05em #333;
+
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+/*.front2 .name {
+  background: rgba(33, 33, 33, 0.9);
+  color: #f8f8f8;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);*/
 
 
-img {
-  background: #00868B;
-  margin: 10%;
-  padding: 5%;
-  border-radius: 20%;
-  max-width: 100%;
-  max-height: 100%;
-  }
+}
+.back-logo {
+	position: absolute;
+	top: 40px;
+	left: 90px;
+	width: 160px;
+	height: 117px;
+	/*background: url("images.jpeg") 0 0 no-repeat;*/
+}
+.back1, .back2 p {
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
