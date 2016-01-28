@@ -36,15 +36,16 @@ header {
   border-radius: 5px;
   justify-content: flex-start;
   border: 5px solid white;
+  min-width: 100%
 }
 
-.logo {
+/*.logo {
   display: flex;
   max-width: 100%;
   max-height: 100%;
   padding: 1%;
   align-self: flex-start;
-}
+}*/
 
 footer {
   display: flex;
@@ -59,57 +60,30 @@ footer {
 
 .logo {
   display: flex;
+  align-self: flex-start;
   max-width: 100%;
   max-height: 100%;
-  align-self: flex-start;
-}
-.front2 > img {
-  display: flex;
-  align-items: center;
 }
 #mainContainer {
   display: flex;
-  flex-direction: row;
+  /*align-content: flex-end;*/
+  justify-content: center;
 }
-#containerOne {
+.innerContainer{
+  /*background-color: orange;
+  border: solid white;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 5px;*/
   display: flex;
-  flex-wrap: wrap;
-  background-color: orange;
-  border: solid white;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: 1%;
+  background: orange;
+  flex: 1;
   padding: 1%;
-  border-radius: 5px;
 }
-#containerTwo {
-  background-color: orange;
-  border: solid white;
-  margin: 1%;
-  padding: 1%;
-  border-radius: 5px;
-
-}
-#containerThree {
-  background-color: orange;
-  border: solid white;
-  margin: 1%;
-  padding: 1%;
-  border-radius: 5px;
-
-}
-#containerFour {
-  background-color: orange;
-  border: solid white;
-  margin: 1%;
-  padding: 1%;
-  border-radius: 5px;
-}
-.flip-container {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -o-perspective: 1000;
-  perspective: 1000;
-}
-
 	.flip-container:hover .flipper,
   .flip-container.hover .flipper {
 		-webkit-transform: rotateY(180deg);
@@ -117,12 +91,13 @@ footer {
     -o-transform: rotateY(180deg);
 		transform: rotateY(180deg);
 }
-
-.flip-container, .front1, .front2, .front3, .front4, .back1, .back2, .back3, .back4 {
-	width: 200px;
-	height: 217px;
+/*.front1, .front2, .front3, .front4, .back1, .back2, .back3, .back4 */
+.flip-container {
+	width: 15em;
+  min-height: 20em;
   padding-left: 3%
-
+  display:flex;
+  justify-content: space-around;
 }
 
 .flipper {
@@ -141,7 +116,7 @@ footer {
 	position: relative;
 }
 
-.front1, .front2, .front3, .front4, .back1, .back2, .back3, .back4 {
+.fimage, .back {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -150,24 +125,15 @@ footer {
 	left: 0;
 }
 
-.back1, .back2, .back3, .back4 {
+.back {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 	background: #f8f8f8;
+  align-content: center;
 }
-.front1 .name, .front2 .name, .front3 .name, .front4 .name {
-	background: rgba(33, 33, 33, 0.9);
-	color: #f8f8f8;
-	text-shadow: 0.1em 0.1em 0.05em #333;
-
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-}
-.back1, .back2, .back3, .back4 p {
+.back p {
 	bottom: 40px;
 	left: 0;
 	right: 0;
@@ -175,9 +141,6 @@ footer {
 	padding: 0 20px;
   font-family: arial;
   line-height: 2em;
-}
-.back1, .back2, .back3, .back4 {
-  align-content: center;
 }
 .logo-section {
   display: flex;
@@ -201,4 +164,17 @@ footer {
 .hvr-grow:active {
   transform: scale(1.3);
 }
-/*These are dummy comments*/
+
+.fimage {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  align-self: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
