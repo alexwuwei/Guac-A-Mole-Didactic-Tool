@@ -2,6 +2,22 @@ var chartData = JSON.parse(localStorage.getItem('guacaResults'));
 
 var chartCanvas = document.getElementById('canvas').getContext('2d');
 
+var meetTheTeam = document.getElementById('meetTheTeam');
+var playAgain = document.getElementById('playAgain');
+
+meetTheTeam.addEventListener('click', teamHandle);
+playAgain.addEventListener('click', playHandle);
+
+function teamHandle(event) {
+  window.location = 'team.html';
+}
+
+function playHandle(event) {
+  window.location = 'main.html';
+}
+
+
+
 var data = {
     labels: ["Math", "Science", "Geography", "Grammar"],
     datasets: [
