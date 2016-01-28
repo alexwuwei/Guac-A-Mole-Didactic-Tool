@@ -10,6 +10,14 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 body {
   background-color: #00868B;
 }
+.gradient {
+
+  background-color: red;
+
+  background-image: linear-gradient(red, orange);
+
+  background: linear-gradient(red, orange);
+}
 
 header > h2 {
   font-size: 50px;
@@ -20,22 +28,34 @@ header > h2 {
   justify-content: center;
   align-self: center;
 }
-
 header {
   display: flex;
-  background-color: orange;
-  margin: 10px;
+  background-color: #FF7600;
+  margin: 2% 1% 1% 1%;
   height: 140px;
   border-radius: 5px;
-  flex-direction: row;
   justify-content: flex-start;
-  border: solid black;
-  /*justify-content: center;
-  align-items: center;*/
+  border: 5px solid white;
 }
-footer {
 
+.logo {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 1%;
+  align-self: flex-start;
 }
+
+footer {
+  display: flex;
+  font-size: 14px;
+  margin: 1% 1% 1% 1%;
+  border-radius: 10px;
+  justify-content: center;
+  background-color: #FF7600;
+  padding: 1%;
+  border: 5px solid white;
+  }
 
 .logo {
   display: flex;
@@ -43,22 +63,26 @@ footer {
   max-height: 100%;
   align-self: flex-start;
 }
-
+.front2 > img {
+  display: flex;
+  align-items: center;
+}
 #mainContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 #containerOne {
+  display: flex;
+  flex-wrap: wrap;
   background-color: orange;
-  border: solid black;
+  border: solid white;
   margin: 1%;
   padding: 1%;
   border-radius: 5px;
 }
 #containerTwo {
   background-color: orange;
-  border: solid black;
+  border: solid white;
   margin: 1%;
   padding: 1%;
   border-radius: 5px;
@@ -66,7 +90,7 @@ footer {
 }
 #containerThree {
   background-color: orange;
-  border: solid black;
+  border: solid white;
   margin: 1%;
   padding: 1%;
   border-radius: 5px;
@@ -74,26 +98,16 @@ footer {
 }
 #containerFour {
   background-color: orange;
-  border: solid black;
+  border: solid white;
   margin: 1%;
   padding: 1%;
   border-radius: 5px;
 }
-/*.frontOne {
-  content:url("img/hugo.jpg");
-}*/
-
-
-/*.teamPhoto {
-  border-radius: 5px;
-  border: solid black 2px;
-}*/
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
   perspective: 1000;
-	border: 1px solid #ccc;
 }
 
 	.flip-container:hover .flipper,
@@ -102,11 +116,13 @@ footer {
 		-moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 		transform: rotateY(180deg);
-	}
+}
 
-.flip-container, .front1, .front2, .front3, .back1, .back2, .back {
+.flip-container, .front1, .front2, .front3, .front4, .back1, .back2, .back3, .back4 {
 	width: 200px;
-	height: 250px;
+	height: 217px;
+  padding-left: 3%
+
 }
 
 .flipper {
@@ -125,33 +141,23 @@ footer {
 	position: relative;
 }
 
-.front1, .front2, .back1, .back2 {
+.front1, .front2, .front3, .front4, .back1, .back2, .back3, .back4 {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-	/*backface-visibility: hidden;*/
-
-
-	position: absolute;
+  position: absolute;
 	top: 0;
 	left: 0;
 }
 
-/*.frontOne {
-	background: url("img/hugo.jpg") 0 0 no-repeat;
-	z-index: 2;
-}*/
-
-.back1, .back2 {
+.back1, .back2, .back3, .back4 {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
-  /*background: url("") 0 0 no-repeat;*/
 	background: #f8f8f8;
-  /*background: red;*/
 }
-.front1 .name, .front2 .name {
+.front1 .name, .front2 .name, .front3 .name, .front4 .name {
 	background: rgba(33, 33, 33, 0.9);
 	color: #f8f8f8;
 	text-shadow: 0.1em 0.1em 0.05em #333;
@@ -161,27 +167,7 @@ footer {
   -o-transform: rotate(-20deg);
 	transform: rotate(-20deg);
 }
-/*.front2 .name {
-  background: rgba(33, 33, 33, 0.9);
-  color: #f8f8f8;
-  text-shadow: 0.1em 0.1em 0.05em #333;
-
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);*/
-
-
-}
-.back-logo {
-	position: absolute;
-	top: 40px;
-	left: 90px;
-	width: 160px;
-	height: 117px;
-	/*background: url("images.jpeg") 0 0 no-repeat;*/
-}
-.back1, .back2 p {
+.back1, .back2, .back3, .back4 p {
 	bottom: 40px;
 	left: 0;
 	right: 0;
@@ -190,3 +176,29 @@ footer {
   font-family: arial;
   line-height: 2em;
 }
+.back1, .back2, .back3, .back4 {
+  align-content: center;
+}
+.logo-section {
+  display: flex;
+  justify-content: center;
+  width: 175;
+  length: 200;
+}
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.3);
+}
+/*These are dummy comments*/
