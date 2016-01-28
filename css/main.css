@@ -25,33 +25,36 @@ body {
   width: 70%;
   length: 70%;
   margin: auto;
+  background-color: #FF7600;
 }
 #subContainerOne {
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  background-color: yellow;
+  background-color: #40007D;
 }
 #subContainerTwo {
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  background-color: green;
+  background-color: #40007D;
 }
 #subContainerThree  {
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  background-color: red;
+  background-color: #40007D;
 }
 #questionForm0, #questionForm1, #questionForm2, #questionForm3, #questionForm4, #questionForm5, #questionForm6, #questionForm7, #questionForm8 {
-  background-color: beige;
+  background-color: #336600;
   border-radius: 15px;
   font-family: sans-serif;
+  color: #d9d926;
   font-weight: bold;
+  font-size: 12px;
   padding: 2%;
   height:231px;
   width:100%;
@@ -62,18 +65,8 @@ button {
 justify-content: flex-end;
 }
 #youWin {
-  background-color: beige;
-  border-radius: 15px;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 2%;
-  height:231px;
-  width:100%;
-  left: 50%;
-  top: 50%;
-}
-#youLose {
-  background-color: beige;
+  background-color: blue;
+  color: white;
   border-radius: 15px;
   font-family: sans-serif;
   font-weight: bold;
