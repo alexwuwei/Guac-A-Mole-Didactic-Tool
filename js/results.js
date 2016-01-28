@@ -7,25 +7,25 @@ var data = {
     datasets: [
         {
             label: "Questions Displayed",
-            fillColor: "rgba(220,220,220,0.5)",
+            fillColor: "rgb(255,117,26)",
             strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
+            highlightFill: "rgb(173, 173, 133)",
             highlightStroke: "rgba(220,220,220,1)",
             data: [0, 0, 0, 0]
         },
         {
             label: "Correct Answers No.",
-            fillColor: "rgba(151,187,205,0.5)",
+            fillColor: "rgb(51,102,0)",
             strokeColor: "rgba(151,187,205,0.8)",
-            highlightFill: "rgba(151,187,205,0.75)",
+            highlightFill: "rgb(153, 153, 38)",
             highlightStroke: "rgba(151,187,205,1)",
             data: [0, 0, 0, 0]
         },
         {
             label: "Incorrect Answers No.",
-            fillColor: "rgba(220,220,220,0.5)",
+            fillColor: "rgb(51,3,99)",
             strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
+            highlightFill: "rgb(229, 230, 25)",
             highlightStroke: "rgba(220,220,220,1)",
             data: [0, 0, 0, 0]
         },
