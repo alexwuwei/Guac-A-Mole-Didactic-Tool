@@ -136,7 +136,7 @@ function getFormValue (event) {
     newDiv.setAttribute('id', 'youWin');
     var divGoesInto = document.getElementById('8');
     divGoesInto.innerHTML = '';
-    newDiv.innerHTML = '<h3>You win! Congratulations, and stuff. Go check out your results, and see where you did best!</h3><br><button name="seeYourResults" >See your results</button>';
+    newDiv.innerHTML = '<h3>Congratulations, and thanks for playing! Go check out your results, and see where you did best!</h3><br><button name="seeYourResults" >See your results</button>';
     divGoesInto.appendChild(newDiv);
   }
   function youLose() {
