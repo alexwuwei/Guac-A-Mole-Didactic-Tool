@@ -44,10 +44,14 @@ wrongAnswerThreeArray = ['Rio De Janeiro','Saudi Arabia','Africa','Farmington','
 
 categoryArray = ['Geography','Geography','Geography','Geography','Geography','Geography','Geography','Geography','Geography','Geography', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Grammar', 'Science', 'Science', 'Science', 'Science', 'Science', 'Science', 'Science', 'Science', 'Science', 'Science', 'Math', 'Math', 'Math', 'Math', 'Math', 'Math', 'Math', 'Math', 'Math', 'Math'];
 
+var questionObjectJSONData = JSON.parse(localStorage.getItem('guacaResults'));
+if (questionObjectJSONData) {
+  questionObjectArray = questionObjectJSONData
+} else {
 for (var i = 0; i < questionsArray.length; i++) {
   questionObjectArray[i] = new QuestionAnswer(questionsArray[i], rightAnswerArray[i], wrongAnswerOneArray[i], wrongAnswerTwoArray[i], wrongAnswerThreeArray[i], categoryArray[i]);
 }
-
+}
 // questionObjectArray[0] = new QuestionAnswer ('What is the capital of Ireland?', 'Dublin', 'Brussels', 'Belfast', 'Rio De Janeiro', 'Geography');
 // questionObjectArray[1] = new QuestionAnswer ('Which country has the largest muslim population?', 'Indonesia', 'Mexico', 'Iran', 'Saudi Arabia', 'Geography');
 // questionObjectArray[2] = new QuestionAnswer ('The North Atlantic current brings warm waters from the tropics to the west coast of which continent?', 'Europe', 'Asia', 'America', 'Africa', 'Geography');
