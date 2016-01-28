@@ -25,7 +25,7 @@ body {
   width: 70%;
   length: 70%;
   margin: auto;
-  background-color: #FF7600
+  background-color: #FF7600;
 }
 #subContainerOne {
   justify-content: center;
@@ -65,18 +65,8 @@ button {
 justify-content: flex-end;
 }
 #youWin {
-  background-color: beige;
-  border-radius: 15px;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 2%;
-  height:231px;
-  width:100%;
-  left: 50%;
-  top: 50%;
-}
-#youLose {
-  background-color: beige;
+  background-color: blue;
+  color: white;
   border-radius: 15px;
   font-family: sans-serif;
   font-weight: bold;
