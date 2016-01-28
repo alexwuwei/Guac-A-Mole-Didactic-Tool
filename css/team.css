@@ -61,44 +61,11 @@ align-self: center;
   border-radius: 5px;
 
 }
+.memberInfo{
+  display: block;
+}
 
-/*#f4_container {
- position: relative;
- margin: 10px auto;
- width: 450px;
- height: 281px;
- z-index: 1;
- }
- #f4_container {
- perspective: 1000;
- }
- #f4_card {
- width: 100%;
- height: 100%;
- transform-style: preserve-3d;
- transition: all 1.0s linear;
- }
- #f4_container :hover #f4_card  {
- transform: rotateY(180deg);
- box-shadow: -5px 5px 5px #aaa;
- }
- .face {
- position: absolute;
- width: 100%;
- height: 100%;
- backface-visibility: hidden;
- }
-.face.back {
- display: block;
- transform: rotateY(180deg);
- box-sizing: border-box;
- padding: 10px;
- color: white;
- text-align: center;
- background-color: #aaa;
- }*/
-
- /*#f2_container {
+ #f2_container {
   position: relative;
   margin: 10px auto;
   width: 450px;
@@ -132,81 +99,11 @@ align-self: center;
   color: white;
   text-align: center;
   background-color: #aaa;
-  }*/
-/*
-  #f3_container {
-   position: relative;
-   margin: 10px auto;
-   width: 450px;
-   height: 281px;
-   z-index: 2;
-   }
-   #f3_container {
-   perspective: 1000;
-   }
-   #f3_card {
-   width: 100%;
-   height: 100%;
-   transform-style: preserve-3d;
-   transition: all 1.0s linear;
-   }
-   #f3_container:hover #f3_card {
-   transform: rotateY(180deg);
-   box-shadow: -5px 5px 5px #aaa;
-   }
-   .face {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   }
-  .face.back {
-   display: block;
-   transform: rotateY(180deg);
-   box-sizing: border-box;
-   padding: 10px;
-   color: white;
-   text-align: center;
-   background-color: #aaa;
-   }*/
+  }
+#pic-text{
+  display: flex;
 
-
-     /*#f4_container {
-      position: relative;
-      margin: 10px auto;
-      width: 450px;
-      height: 281px;
-      z-index: 2;
-      }
-      #f4_container {
-      perspective: 1000;
-      }
-      #f4_card {
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: all 1.0s linear;
-      }
-      #f4_container:hover #f4_card {
-      transform: rotateY(180deg);
-      box-shadow: -5px 5px 5px #aaa;
-      }
-      .face {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      }
-     .face.back {
-      display: block;
-      transform: rotateY(180deg);
-      box-sizing: border-box;
-      padding: 10px;
-      color: white;
-      text-align: center;
-      background-color: #aaa;
-      }*/
-
+}
 
 img {
   background: #00868B;
