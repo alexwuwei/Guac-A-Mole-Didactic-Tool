@@ -19,12 +19,15 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
   // this.globalWrongAnswerTwoTracker = 0;
   // this.globalWrongAnswerThreeTracker = 0;
   // this.globalCatagoryTracker = 0;
+  this.rightAnswerCounter = 0;
+  this.wrongAnswerCounter = 0;
+  this.questionDisplayCounter = 0;
 
 };
 
-QuestionAnswer.prototype.rightAnswerCounter = 0;
-QuestionAnswer.prototype.wrongAnswerCounter = 0;
-QuestionAnswer.prototype.questionDisplayCounter = 0;
+// QuestionAnswer.prototype.rightAnswerCounter = 0;
+// QuestionAnswer.prototype.wrongAnswerCounter = 0;
+// QuestionAnswer.prototype.questionDisplayCounter = 0;
 
 questionObjectArray = [];
 totalQuestionsAnsweredCounter = 0;
@@ -88,13 +91,16 @@ questionObjectArray[39]=new QuestionAnswer (' If an increase of 20% will change 
 //
 // wrongAnswerThreeArray = ['Rio De Janeiro','Saudi Arabia','Africa','Farmington','Mount Shasta','Mexico City','Hiroshima','South Africa','Norway','Spokane','There\'s','principals','tutu','immigrate','effects','Youre','accepts','illicited','layed','brakes','appreciation','nose','virus','44,901 miles','567 m.p.h.','29 degrees','charcoal','Mt. Endevourest','The Arctic','Neither are hot','7','Three lawns','6','35''12','15','31','200','45','320',]
 
+var intervalStuff = setInterval(questionDisplay, 3000);
+
 function questionDisplay () {
-  while (totalQuestionsAnsweredCounter < 1) {
+  if (totalQuestionsAnsweredCounter < 2) {
     var fullDivsCounter = 0;
     for (var i = 0; i < 3; i++) {
       var checkEmptyDiv = document.getElementById(i);
       if (checkEmptyDiv.childNodes.length === 0) {
         createDiv(i);
+        console.log('questionTracker:' + questionTracker);
         return;
       } else {
         fullDivsCounter++;
@@ -103,12 +109,16 @@ function questionDisplay () {
       //   //display game over div
       // }
     }
+  } else {
+    clearInterval(intervalStuff);
+    youWin();
   }
 }
 var formTouched;
 var questionNumber;
 var questionTracker;
 var randomNumberArray = [];
+var globalFormTouched = [];
 // if questionObjectArray[questionNumber].rightAnswer ==
 function createDiv(divPosition) {
   console.log(divPosition);
@@ -127,40 +137,53 @@ function createDiv(divPosition) {
   localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
   var divDeclare = 'questionForm' + divPosition;
   console.log(divDeclare);
-  newDiv.innerHTML = '<form id="' + divDeclare + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
+  newDiv.innerHTML = '<form id="' + divDeclare + '" data-question="' + questionNumber + '"><legend>' + questionObjectArray[randomNumber].questionString + '<br></legend><input type="radio" name="rightAnswer" id="rightAnswer"  />' + questionObjectArray[randomNumber].rightAnswer + '<br><input type="radio" name="wrongAnswerOne" />' +  questionObjectArray[randomNumber].wrongAnswerOne + '<br><input type="radio" name="wrongAnswerTwo" />' +  questionObjectArray[randomNumber].wrongAnswerTwo + '<br><input type="radio" name="wrongAnswerThree" />' +  questionObjectArray[randomNumber].wrongAnswerThree + '<br><button name="submitAnswer" >Submit</button></form>';
   newDiv.class = questionObjectArray[randomNumber].category;
   var divGoesInto = document.getElementById(divPosition);
   divGoesInto.appendChild(newDiv);
   formTouched = document.getElementById('questionForm' + divPosition);
-  console.log("questionForm[" + divPosition + "]?"  + formTouched);
+  globalFormTouched.push(formTouched) ;
+  //console.log("questionForm[" + divPosition + "]?"  + formTouched);
   formTouched.addEventListener('submit', getFormValue);
 }
-setInterval(questionDisplay, 3000);
+
 
 
 var formConcatenate;
 
 function getFormValue (event) {
   event.preventDefault();
-  console.log("handler fired");
+  // console.log("handler fired");
+  // console.log(event.target);
   formConcatenate = 'questionForm' + questionTracker;
-  console.log(formConcatenate);
-  var selection = document.getElementById(formConcatenate).getElementsByTagName('input');
-  console.log(selection);
-    if (questionForm0.rightAnswer.checked) {
-      questionObjectArray[questionNumber].rightAnswerCounter++;
+  //console.log('formConcatenate: ' + formConcatenate);
+  var selection = document.getElementById(formConcatenate);
+  var subSelection = document.getElementById('rightAnswer');
+//  console.log('selection: ' + selection);
+//for (var h = 0; h < globalFormTouched.length; h++) {
+  //console.log('globalFormTouched[h].rightAnswer: ' + event.target.rightAnswer.checked);
+  var currentQuestion = event.target.dataset.question;
+    if (event.target.rightAnswer.checked) {
+      console.log(event.target.dataset.question);
+      //var localFormTouched = globalFormTouched[h];
+      questionObjectArray[currentQuestion].rightAnswerCounter++;
       totalQuestionsAnsweredCounter++;
       localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
-      questionForm0.innerHTML = '<br><br><br>   Correct!<br><br><br>'
-      setTimeout(function () {questionForm0.remove();},2000);
+      event.target.innerHTML = '<br><br><br>   Correct!<br><br><br>';
+      setTimeout(function () {event.target.remove();},2000);
+      return;
     } else {
-      questionObjectArray[questionNumber].wrongAnswerCounter++;
+      console.log(event.target.dataset.question);
+      // var localFormTouched = globalFormTouched[h];
+      questionObjectArray[currentQuestion].wrongAnswerCounter++;
       totalQuestionsAnsweredCounter++;
       localStorage.setItem('guacaResults', JSON.stringify(questionObjectArray));
-      questionForm0.innerHTML = '<br><br><br>   Incorrect!<br><br><br>'
-      setTimeout(function () {questionForm0.remove();},2000);
+      event.target.innerHTML = '<br><br><br>   Incorrect!<br><br><br>'
+      setTimeout(function () {event.target.remove();},2000);
+      return;
     }
-  }
+  //}
+}
 
   function youWin () {
     var newDiv = document.createElement('div');

@@ -1,7 +1,12 @@
+body {
+  background-color: #00868B;
+  font-family: sans-serif;
+}
+
 header {
   display: flex;
   background-color: #FF7600;
-  margin: 10px;
+  margin: 2% 1% 1% 1%;
   height: 140px;
   border-radius: 5px;
   justify-content: flex-start;
@@ -12,7 +17,7 @@ header {
   display: flex;
   max-width: 100%;
   max-height: 100%;
-  padding: 1%
+  padding: 1%;
   align-self: flex-start;
 }
 
@@ -23,14 +28,17 @@ display: flex;
 flex-direction: row;
 margin-left: 30%;
 align-self: center;
+text-shadow: 1px 1px 2px white;
 }
-
 
 #canvasContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 6%;
+}
+
+#canvasContainer > h3 {
+  align-self: center;
 }
 
 canvas {
@@ -40,21 +48,22 @@ canvas {
   align-self: center;
 }
 
-body {
-  background-color: #00868B;
-  font-family: sans-serif;
-}
+
 footer {
   display: flex;
-  align-self: end;
   font-size: 14px;
-  margin: 10px;
+  margin: 3% 1% 1% 1%;
   border-radius: 10px;
   justify-content: center;
   background-color: #FF7600;
   padding: 1%;
   border: 5px solid white;
   }
+
+.buttonCenter {
+  display: flex;
+  justify-content: center;
+}
   button {
     margin-top: 1%;
     font: bold 20px Arial,sans-serif;
