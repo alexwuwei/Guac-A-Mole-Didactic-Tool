@@ -26,7 +26,7 @@ font-size: 50px;
 font-family: cursive;
 display: flex;
 flex-direction: row;
-margin-left: 30%;
+margin-left: 33%;
 align-self: center;
 text-shadow: 1px 1px 2px white;
 }
@@ -59,6 +59,8 @@ footer {
   background-color: #FF7600;
   padding: 1%;
   border: 5px solid white;
+  color: white;
+  font-weight: bolder;
   }
 
 .buttonCenter {
