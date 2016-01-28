@@ -17,7 +17,7 @@ header > h2 {
   font-size: 50px;
   font-family: cursive;
   display: flex;
-  margin-left: 35%;
+  margin-left: 33%;
   justify-content: center;
   align-self: center;
 }
@@ -49,6 +49,8 @@ footer {
   background-color: #FF7600;
   padding: 1%;
   border: 5px solid white;
+  color: white;
+  font-weight: bolder;
   }
 
 .logo {
@@ -145,6 +147,8 @@ padding: 0 20px;
   justify-content: center;
   width: 175;
   length: 200;
+  color: white;
+  font-size: 18px;
 }
 .hvr-grow {
   display: inline-block;
