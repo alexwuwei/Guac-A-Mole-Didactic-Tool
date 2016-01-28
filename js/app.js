@@ -13,21 +13,11 @@ function QuestionAnswer(questionString, rightAnswer, wrongAnswerOne, wrongAnswer
   this.wrongAnswerTwo = wrongAnswerTwo;
   this.wrongAnswerThree = wrongAnswerThree;
   this.category = category;
-  // this.globalQuestionStringTracker = 0;
-  // this.globalRightAnswerTracker = 0;
-  // this.globalWrongAnswerOneTracker = 0;
-  // this.globalWrongAnswerTwoTracker = 0;
-  // this.globalWrongAnswerThreeTracker = 0;
-  // this.globalCatagoryTracker = 0;
   this.rightAnswerCounter = 0;
   this.wrongAnswerCounter = 0;
   this.questionDisplayCounter = 0;
-
 };
 
-// QuestionAnswer.prototype.rightAnswerCounter = 0;
-// QuestionAnswer.prototype.wrongAnswerCounter = 0;
-// QuestionAnswer.prototype.questionDisplayCounter = 0;
 
 questionObjectArray = [];
 totalQuestionsAnsweredCounter = 0;
